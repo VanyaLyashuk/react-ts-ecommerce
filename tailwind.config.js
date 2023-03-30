@@ -5,7 +5,20 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'oliv': 'rgb(104, 105, 45)',
+        'red': '#ad1f00',
+        'main-color': '#212a2f',
+      },
+      boxShadow: {
+        'nav': '0px 2px 24px 0 rgba(0, 0, 0, .09)'
+      },
+      backgroundImage: {
+        'promo-bg-mob': "url(./assets/bg/main-bg--mob.jpg)",
+        'promo-bg-desk': "url(./assets/bg/main-bg.jpg)",
+      }
+    },
   },
   plugins: [],
 }
