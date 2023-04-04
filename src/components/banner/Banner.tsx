@@ -7,7 +7,7 @@ type BannerClasses = {
   fs: string;
 };
 
-const Banner = ({gist}: BannerProps) => {
+const Banner = ({ gist }: BannerProps) => {
   const styles: [BannerClasses, BannerClasses] = [
     { bg: "bg-oliv", fs: "text-xs" },
     { bg: "bg-main-color", fs: "text-sm" },
@@ -15,9 +15,19 @@ const Banner = ({gist}: BannerProps) => {
 
   const saleContent: JSX.Element = (
     <>
-      Get Sweaty, Feel Good With Up to 40% Off Select Styles. <span className="whitespace-nowrap">
-        <a className="underline" href="/">Shop Men</a> | <a className="underline" href="/">Shop Women</a> *
-        <a className="underline" href="/">Details</a>
+      Get Sweaty, Feel Good With Up to 40% Off Select Styles.{" "}
+      <span className="whitespace-nowrap">
+        <a className="underline" href="/">
+          Shop Men
+        </a>{" "}
+        |{" "}
+        <a className="underline" href="/">
+          Shop Women
+        </a>{" "}
+        *
+        <a className="underline" href="/">
+          Details
+        </a>
       </span>
     </>
   );
