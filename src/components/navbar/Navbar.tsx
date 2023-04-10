@@ -3,7 +3,7 @@ import NavbarDesk from "./NavbarDesk";
 
 const Navbar = () => {
   return (
-    <div className="navbar relative z-50">
+    <div className="navbar relative z-50 bg-white">
       <NavbarMob />
       <NavbarDesk />
     </div>

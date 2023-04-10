@@ -1,4 +1,4 @@
-import Logo from '../UI/Logo';
+import Logo from '../logo/Logo';
 import cartIcon from '../../assets/cart-icon.svg';
 import infoIcon from '../../assets/info-icon.svg';
 import userIcon from '../../assets/user-icon.svg';

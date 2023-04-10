@@ -1,7 +1,7 @@
 import Banner from '../banner/Banner';
 import Navbar from '../navbar/Navbar';
 import Promo from '../promo/Promo';
-import './App.scss'
+import Favorites from '../favorites/Favorites';
 
 function App() {
   return (
@@ -13,13 +13,7 @@ function App() {
       <Promo />
       <Banner gist="note"/>
       <main className="main">
-        <section className="our-favorites section">
-          <div className="container mx-auto">
-            <h2 className="title our-favorites__title">
-              Our Favorites
-            </h2>
-          </div>
-        </section>
+        <Favorites />
       </main>
     </div>
   )

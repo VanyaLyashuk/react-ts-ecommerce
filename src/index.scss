@@ -18,6 +18,12 @@
   .btn.btn--light {
     @apply bg-white border-white text-main-color hover:text-white hover:bg-main-color hover:border-main-color;
   }
+  .btn.btn--dark {
+    @apply bg-main-color border-main-color text-white hover:text-main-color;
+  }
+  .btn.btn--small {
+    @apply py-[10px];
+  }
   .nav__btn,
   .nav__link {
     @apply uppercase text-main-color text-xs font-bold hover:underline tracking-widest;
@@ -30,4 +36,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html,
+body {
+  position: relative;
+  overflow-x: hidden;
 }

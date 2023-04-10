@@ -1,5 +1,5 @@
-import Hamburger from "../UI/Hamburger";
-import Logo from "../UI/Logo";
+import Hamburger from "../hamburger/Hamburger";
+import Logo from "../logo/Logo";
 import cartIcon from '../../assets/cart-icon.svg';
 import searchIcon from '../../assets/search-icon.svg';
 
