@@ -1,7 +1,8 @@
 import Banner from '../banner/Banner';
 import Navbar from '../navbar/Navbar';
-import Promo from '../promo/Hero';
+import Hero from '../hero/Hero';
 import Favorites from '../favorites/Favorites';
+import Promo from '../promo/Promo';
 
 function App() {
   return (
@@ -10,10 +11,11 @@ function App() {
         <Banner gist="sale"/>
         <Navbar />
       </header>
-      <Promo />
+      <Hero />
       <Banner gist="note"/>
       <main className="main">
         <Favorites />
+        <Promo />
       </main>
     </div>
   )

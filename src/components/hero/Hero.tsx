@@ -14,8 +14,8 @@ export default function Hero() {
           </p>
         </div>
         <div className="flex justify-center gap-2 sm:absolute sm:bottom-[50px] sm:left-50% sm:gap-5 xl:bottom-[70px]">
-          <Btn btnTxt="Shop Men" className="btn btn--light" />
-          <Btn btnTxt="Shop Women" className="btn btn--light" />
+          <Btn className="btn btn--light" >Shop Men</Btn>
+          <Btn className="btn btn--light" >Shop Women</Btn>
         </div>
       </div>
     </section>

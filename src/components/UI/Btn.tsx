@@ -1,13 +1,13 @@
 type BtnProps = {
-  btnTxt: string,
+  children: string,
   className?: string,
 }
 
-const Btn = ({ btnTxt, className}: BtnProps) => {
+const Btn = ({ children, className}: BtnProps) => {
   return (
     <button
       className={`btn ${className ? className : null}`}>
-        {btnTxt}
+        {children}
     </button>
   )
 }

@@ -56,8 +56,8 @@ const ProdCard = () => {
           alt="product"
         />
         <div className="hidden lg:w-full lg:h-full lg:absolute lg:top-0 lg:bottom-0 lg:left-0 lg:right-0 lg:z-10 lg:bg-black/[.4] lg:flex lg:flex-col lg:justify-center lg:p-10 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 ease-out">
-          <Btn btnTxt="Shop Men" className="btn--light text-base mb-2" />
-          <Btn btnTxt="Shop Women" className="btn--light text-base" />
+          <Btn className="btn--light text-base mb-2">Shop Men</Btn>
+          <Btn className="btn--light text-base">Shop Women</Btn>
         </div>
       </div>
       <div className="flex flex-col py-3.5 px-5 lg:py-5 lg:px-8">
@@ -75,10 +75,12 @@ const ProdCard = () => {
         </div>
         <div className="flex flex-col lg:hidden">
           <Btn
-            btnTxt="Shop Men"
-            className="btn--dark btn--small text-xs mb-2"
-          />
-          <Btn btnTxt="Shop Women" className="btn--dark btn--small text-xs" />
+            className="btn--dark btn--small text-xs mb-2">
+              Shop Men
+          </Btn>
+          <Btn className="btn--dark btn--small text-xs">
+            Shop Women
+          </Btn>
         </div>
       </div>
     </li>
