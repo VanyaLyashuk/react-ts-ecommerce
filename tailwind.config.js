@@ -10,6 +10,7 @@ export default {
         'oliv': 'rgb(104, 105, 45)',
         'red': '#ad1f00',
         'main-color': '#212a2f',
+        'border-gray': '#d3d4d5'
       },
       boxShadow: {
         'nav': '0px 2px 24px 0 rgba(0, 0, 0, .09)'

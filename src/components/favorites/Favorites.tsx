@@ -2,24 +2,51 @@ import { nanoid } from "nanoid";
 import prod1 from "../../assets/prod1.jpg";
 import lightIcon from "../../assets/feather-icon.svg";
 import Btn from "../UI/Btn";
+import Tabs from '../tabs/Tabs';
 
 const Favorites = () => {
   return (
     <section className="our-favorites section">
-      <div className="container mx-auto px-3">
-        <h2 className="title our-favorites__title">Our Favorites</h2>
-        <ul className="favorites w-full flex flex-nowrap justify-center gap-4">
-          <FavoritesProdCard />
+      <h2 className="title our-favorites__title">Our Favorites</h2>
+      <div className="overflow-x-scroll cursor-grab scroll-smooth no-scrollbar sm:overflow-x-auto">
+        <Tabs />
+      </div>
+      <ul className="favorites flex flex-nowrap justify-start items-center gap-4 px-4 lg:hidden">
+        <ProdCard />
+        <ProdCard />
+        <ProdCard />
+        <ProdCard />
+        <ProdCard />
+        <ProdCard />
+        <ProdCard />
+        <ProdCard />
+        <ProdCard />
+      </ul>
+      <div className="hidden lg:flex justify-center">
+        <ul className="flex justify-center gap-4">
+          <ProdCard />
+          <ProdCard />
+          <ProdCard />
+        </ul>
+        <ul className="hidden">
+          <ProdCard />
+          <ProdCard />
+          <ProdCard />
+        </ul>
+        <ul className="hidden">
+          <ProdCard />
+          <ProdCard />
+          <ProdCard />
         </ul>
       </div>
     </section>
   );
 };
 
-const FavoritesProdCard = () => {
+const ProdCard = () => {
   return (
     <li
-      className="w-full max-w-[250px] bg-white shadow-lg lg:max-w-[310px]"
+      className="w-full max-w-[250px] shrink-0 bg-white shadow-lg lg:max-w-[310px]"
       key={nanoid()}
     >
       <div className="group w-full h-[250px] overflow-hidden relative lg:h-[310px] lg:cursor-pointer">
