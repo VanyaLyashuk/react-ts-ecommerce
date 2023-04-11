@@ -16,7 +16,7 @@ const Promo = () => {
       </div>
       <div className="section container mx-auto px-3">
         <h2 className="title">Meet the Riser</h2>
-        <p className='text-center text-base mb-5 sm:text-lg xl:mb-7'>Elevated design meets nature-made materials</p>
+        <p className='text-center text-base mb-5 xl:mb-7'>Elevated design meets nature-made materials</p>
         <div className='flex justify-center gap-2'>
           <Btn className='btn btn--dark'>Shop Men</Btn>
           <Btn className='btn btn--dark'>Shop Women</Btn>

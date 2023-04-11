@@ -8,7 +8,7 @@ export default function Hero() {
           <h2 className="text-white font-bold text-4xl mb-3 drop-shadow-md md:text-5xl md:mb-4 xl:text-6xl">
             Up to 40% off Select Styles
           </h2>
-          <p className="text-white font-medium text-md drop-shadow-md sm:text-lg xl:text-xl">
+          <p className="text-white font-medium text-lg drop-shadow-md sm:text-lg xl:text-xl">
             Workout smarter, not harder with deals on performance styles{" "}
             <span className="whitespace-nowrap">in-stores & online</span>
           </p>

@@ -46,7 +46,7 @@ const Favorites = () => {
 const ProdCard = () => {
   return (
     <li
-      className="w-full max-w-[250px] shrink-0 bg-white shadow-lg lg:max-w-[310px]"
+      className="w-full max-w-[250px] shrink-0 bg-white shadow-lg lg:max-w-[310px] xl:max-w-[340px]"
       key={nanoid()}
     >
       <div className="group w-full h-[250px] overflow-hidden relative lg:h-[310px] lg:cursor-pointer">
@@ -61,7 +61,7 @@ const ProdCard = () => {
         </div>
       </div>
       <div className="flex flex-col py-3.5 px-5 lg:py-5 lg:px-8">
-        <h3 className="text-lg font-bold pb-2.5 mb-2.5 border-b-[1px] lg:text-xl">
+        <h3 className="text-lg font-bold pb-2.5 mb-2.5 border-b-[1px] lg:text-xl lg:mb-3 lg:pb-3">
           Air force 1 Low
         </h3>
         <div className="flex gap-1 items-center mb-4 lg:mb-0">
