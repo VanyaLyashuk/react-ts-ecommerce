@@ -1,6 +1,6 @@
 import Banner from '../banner/Banner';
 import Navbar from '../navbar/Navbar';
-import Promo from '../promo/Promo';
+import Promo from '../promo/Hero';
 import Favorites from '../favorites/Favorites';
 
 function App() {

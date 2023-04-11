@@ -16,8 +16,8 @@ export default {
         'nav': '0px 2px 24px 0 rgba(0, 0, 0, .09)'
       },
       backgroundImage: {
-        'promo-bg-mob': "url(./assets/bg/main-bg--mob.jpg)",
-        'promo-bg-desk': "url(./assets/bg/main-bg.jpg)",
+        'hero-bg-mob': "url(./assets/bg/hero-bg--mob.jpg)",
+        'hero-bg-desk': "url(./assets/bg/hero-bg.jpg)",
       }
     },
   },
