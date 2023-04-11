@@ -46,7 +46,7 @@ const Favorites = () => {
 const ProdCard = () => {
   return (
     <li
-      className="w-full max-w-[250px] shrink-0 bg-white shadow-lg lg:max-w-[310px] xl:max-w-[340px]"
+      className="w-full max-w-[265px] shrink-0 bg-white shadow-lg lg:max-w-[310px] xl:max-w-[340px]"
       key={nanoid()}
     >
       <div className="group w-full h-[250px] overflow-hidden relative lg:h-[310px] lg:cursor-pointer">

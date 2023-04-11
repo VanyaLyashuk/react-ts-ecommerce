@@ -1,7 +1,6 @@
 import Btn from '../UI/Btn';
-
-import promoImg from '../../assets/promo-img01.jpg'
-import promoImgMob from '../../assets/promo-img01--mob.jpg'
+import promoImg from '../../assets/promo-img01.jpg';
+import promoImgMob from '../../assets/promo-img01--mob.jpg';
 
 const Promo = () => {
   return (
