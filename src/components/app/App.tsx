@@ -5,6 +5,7 @@ import Favorites from '../favorites/Favorites';
 import Promo from '../promo/Promo';
 import Slider from '../slider/Slider';
 import Newsletter from '../newsletter/Newsletter';
+import Footer from '../footer/Footer';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Slider />
         <Newsletter />
       </main>
+      <Footer />
     </div>
   )
 }

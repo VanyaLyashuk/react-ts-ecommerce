@@ -25,6 +25,9 @@
   .nav__link {
     @apply uppercase text-main-color text-xs font-bold hover:underline tracking-widest;
   }
+  .footer__icon {
+    @apply fill-white;
+  }
 }
 
 @layer utilities {
