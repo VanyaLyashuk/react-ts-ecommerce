@@ -1,7 +1,5 @@
 import Hamburger from "../hamburger/Hamburger";
 import Logo from "../logo/Logo";
-import cartIcon from '../../assets/cart-icon.svg';
-import searchIcon from '../../assets/search-icon.svg';
 
 const NavbarMob = () => {
   return (
@@ -12,16 +10,14 @@ const NavbarMob = () => {
           <Logo />
           <div className="flex gap-3">
             <button>
-              <img 
-                className="w-[24px] h-[24px]"
-                src={searchIcon} 
-                alt="search icon" />
+              <svg className="w-[25px] h-[25px]">
+                <use xlinkHref="#search-icon"/>
+              </svg>
             </button>
             <button>
-              <img 
-                className="w-[32px] h-[32px]"
-                src={cartIcon} 
-                alt="cart icon" />
+              <svg className="w-[32px] h-[32px]">
+                <use xlinkHref="#cart-icon"/>
+              </svg>
             </button>
           </div>
         </div>

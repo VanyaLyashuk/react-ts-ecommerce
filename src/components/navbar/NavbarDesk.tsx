@@ -1,7 +1,4 @@
 import Logo from '../logo/Logo';
-import cartIcon from '../../assets/cart-icon.svg';
-import infoIcon from '../../assets/info-icon.svg';
-import userIcon from '../../assets/user-icon.svg';
 
 const NavbarDesk = () => {
 
@@ -43,26 +40,23 @@ const NavbarDesk = () => {
               <ul className="flex items-center gap-2.5">
                 <li>
                   <a href="/">
-                    <img 
-                      className='w-[24px] h-[24px]'
-                      src={userIcon} 
-                      alt="user icon" />
+                    <svg className='w-[24px] h-[24px]'>
+                      <use xlinkHref="#user-icon"/>
+                    </svg>
                   </a>
                 </li>
                 <li>
                   <a href="/">
-                    <img 
-                      className='w-[28px] h-[28px]'
-                      src={infoIcon} 
-                      alt="info icon" />
+                    <svg className='w-[28px] h-[28px]'>
+                      <use xlinkHref="#info-icon"/>
+                    </svg>
                   </a>
                 </li>
                 <li className="flex">
                   <button>
-                    <img 
-                      className='w-[32px] h-[32px]'
-                      src={cartIcon} 
-                      alt="cart icon"/>
+                    <svg className='w-[32px] h-[32px]'>
+                      <use xlinkHref="#cart-icon"/>
+                    </svg>
                   </button>
                 </li>
               </ul>
