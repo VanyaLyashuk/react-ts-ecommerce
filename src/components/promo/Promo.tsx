@@ -5,7 +5,7 @@ import promoImgMob from '../../assets/promo-img01--mob.jpg';
 const Promo = () => {
   return (
     <section className="promo">
-      <div className='w-full h-[325px] overflow-hidden md:h-[375px] lg:h-[525px]'>
+      <div className='w-full h-[325px] min-h-[325px] overflow-hidden md:h-[375px] lg:h-[525px]'>
         <picture>
           <source media="(min-width: 650px)" srcSet={promoImg} />
           <img 

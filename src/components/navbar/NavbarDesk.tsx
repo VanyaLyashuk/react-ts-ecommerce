@@ -8,7 +8,7 @@ const NavbarDesk = () => {
   return (
     <div className="hidden xl:block">
       <nav className="nav nav--desk shadow-nav">
-        <div className="container mx-auto flex justify-between p-3">
+        <div className="container mx-auto flex justify-between p-3 xl:px-4">
           <ul className="flex items-center gap-8">
             <li className='flex'>
               <button className="nav__btn">Men</button>

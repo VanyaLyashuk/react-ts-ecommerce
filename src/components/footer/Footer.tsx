@@ -25,7 +25,7 @@ const ListLinks = ({ links }: ListLinksProps) => {
     <ul>
       {links?.map((link) => (
         <li className="mb-2 last:mb-0 flex sm:mb-3" key={nanoid()}>
-          <a className="text-sm text-white" href="/">
+          <a className="text-[12px] leading-normal text-white lg:text-sm" href="/">
             {link}
           </a>
         </li>
@@ -62,7 +62,7 @@ const Footer = () => {
           </Block>
           <Block title="Follow The Flock" className="w-[100%] max-w-[404px] sm:max-w-[300px] md:max-w-[404px]">
             <>
-              <p className="text-sm text-white mb-3 sm:mb-4">
+              <p className="text-[12px] leading-normal text-white mb-3 sm:mb-4 lg:text-sm">
                 Exclusive offers, a heads up on new things, and sightings of
                 Ivn_nvI in the wild. Oh, we have cute sheep, too.
               </p>

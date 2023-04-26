@@ -1,12 +1,13 @@
 type BtnProps = {
   children: string,
   className?: string,
+  disabled?: boolean
 }
 
-const Btn = ({ children, className}: BtnProps) => {
+const Btn = ({ children, className, disabled}: BtnProps) => {
   return (
     <button
-      className={`btn ${className ? className : null}`}>
+      className={`btn ${className ? className : null}`} disabled={disabled}>
         {children}
     </button>
   )
