@@ -1,82 +1,68 @@
-import { nanoid } from "nanoid";
 import Btn from "../UI/Btn";
 import sliderImg from "../../assets/prod1.jpg";
 import Accordion from "../UI/Accordion";
+import BreadCrumbs from "../UI/BreadCrumbs";
+import Colourways from "../UI/Colourways";
+import Sizes from "../UI/Sizes";
 import ProdCardSmall from "../UI/ProdCardSmall";
 
-interface BreadCrumbsProps {
-  links: string[];
-}
-
-interface ColorWaysProps {
-  colors: Array<{
-    mainColor: string;
-    accentColor?: string;
-    colorName?: string;
-    active: boolean;
-  }>;
-}
-
-interface SizesProps {
-  sizes: Array<number>;
-}
-
-const BreadCrumbs = ({ links }: BreadCrumbsProps) => {
-  const listItems = links.map((link) => (
-    <li className="text-[11px] leading-tight font-bold mr-[4px]" key={nanoid()}>
-      <a href="/" className="underline mr-[2px] tracking-wider">
-        {link}
-      </a>{" "}
-      /
-    </li>
-  ));
-  return <ul className="breadcrumbs__list flex mb-3 lg:mb-4">{listItems}</ul>;
-};
-
-const ColorWays = ({ colors }: ColorWaysProps) => {
-  const buttons = colors.map(
-    ({ mainColor, accentColor, colorName, active }) => (
-      <button
-        key={nanoid()}
-        className={`colorways-btn ${active ? "active" : ""}`}
-        style={{
-          background: `linear-gradient(135deg, ${mainColor} 50%, ${
-            accentColor ? accentColor : mainColor
-          } 50%)`,
-        }}
-        data-name={colorName}
-      ></button>
-    )
-  );
-  return (
-    <div className="mb-4 md:mb-5 lg:mb-6">
-      <h3 className="text-sm mb-3 lg:mb-4">
-        <span className="font-bold uppercase">Sale:</span> Forage Green
-        (Blizzard Sole)
-      </h3>
-      <div className="flex flex-wrap gap-3">{buttons}</div>
-    </div>
-  );
-};
-
-const Sizes = ({ sizes }: SizesProps) => {
-  const buttons = sizes.map((size) => (
-    <button key={nanoid()} className="size-btn">
-      {size}
-    </button>
-  ));
-  return (
-    <div className="mb-2 md:mb-5 lg:mb-7">
-      <h3 className="text-sm mb-3 lg:mb-4">
-        <span className="font-bold uppercase">Select size:</span>
-      </h3>
-      <div className="flex flex-wrap gap-2 mb-2 lg:mb-3">{buttons}</div>
-      <button className="block text-[12px] underline font-bold leading-tight mb-5 lg:mb-6">
-        See Size Chart
-      </button>
-    </div>
-  );
-};
+const colors = [
+  {
+    mainColor: "#e0e2dc",
+    accentColor: "#e0e2dc",
+    colorName: "Blizzard (Blizzard Sole)",
+    active: false,
+  },
+  {
+    mainColor: "#000",
+    accentColor: "#e0e2dc",
+    colorName: "Natural Black (Blizzard Sole)",
+    active: false,
+  },
+  {
+    mainColor: "#f2bc73",
+    accentColor: "#e0e2dc",
+    colorName: "Forage Tan (Blizzard Sole)",
+    active: false,
+  },
+  {
+    mainColor: "#B6576E",
+    accentColor: "#e0e2dc",
+    colorName: "Lux Pink (Blizzard Sole)",
+    active: true,
+  },
+  {
+    mainColor: "#E4BC8A",
+    accentColor: "#e0e2dc",
+    colorName: "Lux Beige (Blizzard Sole)",
+    active: false,
+  },
+  {
+    mainColor: "#ED561B",
+    accentColor: "#e0e2dc",
+    colorName: "Buoyant Orange (Blizzard Sole)",
+    active: false,
+  },
+  {
+    mainColor: "#FFA94A",
+    accentColor: "#e0e2dc",
+    colorName: "Thrive Yellow (Blizzard Sole)",
+    active: false,
+  },
+  {
+    mainColor: "#008697",
+    accentColor: "#e0e2dc",
+    colorName: "Thrive Teal (Blizzard Sole)",
+    active: false,
+  },
+  {
+    mainColor: "#62654C",
+    accentColor: "#e0e2dc",
+    colorName: "Forage Green (Blizzard Sole)",
+    active: false,
+  },
+];
+const sizes = [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11];
 
 const ContentMob = () => {
   return (
@@ -128,65 +114,8 @@ const ContentMob = () => {
         </li>
       </ul>
       <div className="container mx-auto px-3 pb-8 sm:pb-10">
-        <ColorWays
-          colors={[
-            {
-              mainColor: "#e0e2dc",
-              accentColor: "#e0e2dc",
-              colorName: "Blizzard (Blizzard Sole)",
-              active: false,
-            },
-            {
-              mainColor: "#000",
-              accentColor: "#e0e2dc",
-              colorName: "Natural Black (Blizzard Sole)",
-              active: false,
-            },
-            {
-              mainColor: "#f2bc73",
-              accentColor: "#e0e2dc",
-              colorName: "Forage Tan (Blizzard Sole)",
-              active: false,
-            },
-            {
-              mainColor: "#B6576E",
-              accentColor: "#e0e2dc",
-              colorName: "Lux Pink (Blizzard Sole)",
-              active: true,
-            },
-            {
-              mainColor: "#E4BC8A",
-              accentColor: "#e0e2dc",
-              colorName: "Lux Beige (Blizzard Sole)",
-              active: false,
-            },
-            {
-              mainColor: "#ED561B",
-              accentColor: "#e0e2dc",
-              colorName: "Buoyant Orange (Blizzard Sole)",
-              active: false,
-            },
-            {
-              mainColor: "#FFA94A",
-              accentColor: "#e0e2dc",
-              colorName: "Thrive Yellow (Blizzard Sole)",
-              active: false,
-            },
-            {
-              mainColor: "#008697",
-              accentColor: "#e0e2dc",
-              colorName: "Thrive Teal (Blizzard Sole)",
-              active: false,
-            },
-            {
-              mainColor: "#62654C",
-              accentColor: "#e0e2dc",
-              colorName: "Forage Green (Blizzard Sole)",
-              active: false,
-            },
-          ]}
-        />
-        <Sizes sizes={[5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11]} />
+        <Colourways colors={colors} paletteSize="regular"/>
+        <Sizes sizes={sizes} paletteSize="regular"/>
         <Btn className="btn btn--dark w-full mb-3 block" disabled={true}>
           Select a size
         </Btn>
@@ -321,66 +250,11 @@ const ContentDesk = () => {
               </ul>
               <span className="text-sm underline">(0)</span>
             </a>
-            <ColorWays
-              colors={[
-                {
-                  mainColor: "#e0e2dc",
-                  accentColor: "#e0e2dc",
-                  colorName: "Blizzard (Blizzard Sole)",
-                  active: false,
-                },
-                {
-                  mainColor: "#000",
-                  accentColor: "#e0e2dc",
-                  colorName: "Natural Black (Blizzard Sole)",
-                  active: false,
-                },
-                {
-                  mainColor: "#f2bc73",
-                  accentColor: "#e0e2dc",
-                  colorName: "Forage Tan (Blizzard Sole)",
-                  active: false,
-                },
-                {
-                  mainColor: "#B6576E",
-                  accentColor: "#e0e2dc",
-                  colorName: "Lux Pink (Blizzard Sole)",
-                  active: true,
-                },
-                {
-                  mainColor: "#E4BC8A",
-                  accentColor: "#e0e2dc",
-                  colorName: "Lux Beige (Blizzard Sole)",
-                  active: false,
-                },
-                {
-                  mainColor: "#ED561B",
-                  accentColor: "#e0e2dc",
-                  colorName: "Buoyant Orange (Blizzard Sole)",
-                  active: false,
-                },
-                {
-                  mainColor: "#FFA94A",
-                  accentColor: "#e0e2dc",
-                  colorName: "Thrive Yellow (Blizzard Sole)",
-                  active: false,
-                },
-                {
-                  mainColor: "#008697",
-                  accentColor: "#e0e2dc",
-                  colorName: "Thrive Teal (Blizzard Sole)",
-                  active: false,
-                },
-                {
-                  mainColor: "#62654C",
-                  accentColor: "#e0e2dc",
-                  colorName: "Forage Green (Blizzard Sole)",
-                  active: false,
-                },
-              ]}
+            <Colourways
+              colors={colors} paletteSize="regular"
             />
             <Sizes
-              sizes={[5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11]}
+              sizes={sizes} paletteSize="regular"
             />
             <Btn className="btn btn--dark w-full mb-3 block" disabled={true}>
               Select a size
@@ -409,7 +283,9 @@ const ContentDesk = () => {
             </div>
             <Accordion />
             <div>
-              <h4 className="font-bold text-lg mb-3 lg:text-[20px] lg:mb-4 xl:text-[22px]">Also Consider</h4>
+              <h4 className="font-bold text-lg mb-3 lg:text-[20px] lg:mb-4 xl:text-[22px]">
+                Also Consider
+              </h4>
               <ul className="flex w-full gap-2 lg:gap-0 justify-between">
                 <ProdCardSmall />
                 <ProdCardSmall />

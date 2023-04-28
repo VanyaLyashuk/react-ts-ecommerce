@@ -5,7 +5,7 @@ import Favorites from '../favorites/Favorites';
 import Promo from '../promo/Promo';
 import Slider from '../slider/Slider';
 import Newsletter from '../newsletter/Newsletter';
-import { MainProdPage } from '../pages';
+import { MainProdPage, ProductsPage } from '../pages';
 import Footer from '../footer/Footer';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
         <Banner gist="sale"/>
         <Navbar />
       </header>
-      <Hero />
+      {/* <Hero />
       <Banner gist="note"/>
       <main className="main">
         <Favorites />
@@ -24,8 +24,9 @@ function App() {
         <Promo />
         <Slider />
         <Newsletter />
-      </main>
+      </main> */}
       {/* <MainProdPage /> */}
+      <ProductsPage />
       <Footer />
     </div>
   )

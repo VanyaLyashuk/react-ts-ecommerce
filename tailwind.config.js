@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: '480px'
+      },
       colors: {
         'oliv': 'rgb(104, 105, 45)',
         'red': '#ad1f00',

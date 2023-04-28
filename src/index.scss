@@ -29,16 +29,31 @@
     @apply uppercase text-main-color text-xs font-bold hover:underline tracking-widest;
   }
   .colorways-btn {
-    @apply bg-[#e0e2dc] rounded-full w-[30px] h-[30px] border border-[#d3d4d5] lg:w-[38px] lg:h-[38px] xl:w-[46px] xl:h-[46px];
-  }
-  .colorways-btn.active {
-    @apply relative;
+    @apply relative bg-[#e0e2dc] rounded-full border border-[#d3d4d5];
   }
   .colorways-btn.active:after {
-    @apply content-[''] w-9 h-9 rounded-full border-2 border-[#74797c] absolute left-2/4 top-2/4 translate-x-[-50%] translate-y-[-50%] lg:w-[42px] lg:h-[42px] xl:w-[48px] xl:h-[48px];
+    @apply content-[''] rounded-full border-2 border-[#74797c] absolute left-2/4 top-2/4 translate-x-[-50%] translate-y-[-50%];
+  }
+  .colorways-btn--regular {
+    @apply w-[30px] h-[30px] lg:w-[38px] lg:h-[38px] xl:w-[46px] xl:h-[46px];
+  }
+  .colorways-btn--regular.active:after {
+    @apply w-9 h-9 lg:w-[42px] lg:h-[42px] xl:w-[48px] xl:h-[48px];
+  }
+  .colorways-btn--small {
+    @apply w-[22px] h-[22px];
+  }
+  .colorways-btn--small.active:after {
+    @apply w-[26px] h-[26px];
   }
   .size-btn {
-    @apply w-10 h-10 border border-main-color text-main-color text-[12px] xl:w-12 xl:h-12;
+    @apply border border-main-color text-main-color text-[12px] leading-none;
+  }
+  .size-btn--regular {
+    @apply w-10 h-10 xl:w-12 xl:h-12;
+  }
+  .size-btn--small {
+    @apply w-8 h-8 xl:w-10 xl:h-10;
   }
   .size-btn:hover,
   .size-btn:focus {
