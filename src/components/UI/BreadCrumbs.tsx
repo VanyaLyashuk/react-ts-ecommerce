@@ -13,7 +13,7 @@ const BreadCrumbs = ({ links }: BreadCrumbsProps) => {
       /
     </li>
   ));
-  return <ul className="breadcrumbs__list flex mb-3 lg:mb-4">{listItems}</ul>;
+  return <ul className="breadcrumbs__list flex">{listItems}</ul>;
 };
 
 export default BreadCrumbs;

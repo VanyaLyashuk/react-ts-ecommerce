@@ -17,6 +17,8 @@ export default {
       },
       boxShadow: {
         'nav': '0px 2px 24px 0 rgba(0, 0, 0, .09)',
+        'prod-card': '0px 10px 30px 0px rgba(0, 0, 0, 0.23)',
+        'quick-add': 'white 0px -10px 0px 0px, rgba(0, 0, 0, 0.23) 0px 10px 20px 0px',
         'newsletter': 'transparent 0px 2px 0px 0px inset, transparent 2px 0px 0px 0px inset, transparent -2px 0px 0px 0px inset;',
         'newsletterActive': 'rgb(33, 42, 47) 0px 2px 0px 0px inset, rgb(33, 42, 47) 2px 0px 0px 0px inset, rgb(33, 42, 47) -2px 0px 0px 0px inset;',
       },

@@ -68,7 +68,9 @@ const ContentMob = () => {
   return (
     <div className="md:hidden">
       <div className="container mx-auto px-3 pt-8 sm:pt-10">
-        <BreadCrumbs links={["Home", "Women's Shoes", "Active Shoes"]} />
+        <div className="mb-3 lg:mb-4">
+          <BreadCrumbs links={["Home", "Women's Shoes", "Active Shoes"]} />
+        </div>
         <div className="flex gap-3 items-center justify-between mb-3">
           <h2 className="text-base leading-tight font-bold">
             Women's Tree Flyers
@@ -217,7 +219,9 @@ const ContentDesk = () => {
             </li>
           </ul>
           <div className="w-full max-w-[290px] lg:max-w-[360px] xl:max-w-[440px]">
-            <BreadCrumbs links={["Home", "Women's Shoes", "Active Shoes"]} />
+            <div className="mb-3 lg:mb-4">
+              <BreadCrumbs links={["Home", "Women's Shoes", "Active Shoes"]} />
+            </div>
             <h2 className="text-2xl leading-tight font-bold mb-3 lg:text-3xl lg:mb-4">
               Women's Tree Flyers
             </h2>

@@ -24,7 +24,7 @@ const SizesContainerRegular = ({buttons}: SizesContainerProps) => {
 }
 const SizesContainerSmall = ({buttons}: SizesContainerProps) => {
   return (
-    <div className="flex flex-wrap gap-2 mt-3">{buttons}</div>
+    <div className="flex flex-wrap gap-1 mt-3">{buttons}</div>
   );
 }
 
