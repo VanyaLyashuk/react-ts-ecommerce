@@ -24,6 +24,9 @@
   .btn--dark:disabled {
     @apply bg-[#d3d4d5] text-white border-[#d3d4d5]
   }
+  .btn--stroke {
+    @apply border-main-color text-main-color bg-white hover:bg-main-color hover:text-white;
+  }
   .nav__btn,
   .nav__link {
     @apply uppercase text-main-color text-xs font-bold hover:underline tracking-widest;

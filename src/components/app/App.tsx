@@ -6,13 +6,12 @@ import Promo from '../promo/Promo';
 import Slider from '../slider/Slider';
 import Newsletter from '../newsletter/Newsletter';
 import { MainProdPage, ProductsList } from '../pages';
-import Backdrop from '../UI/Backdrop';
-import Filters from '../filters/Filters';
 import Footer from '../footer/Footer';
+import Cart from '../cart/Cart';
 
 function App() {
   return (
-    <div className="App text-3xl">
+    <div className="text-3xl App">
       <header className="header">
         <Banner gist="sale"/>
         <Navbar />
@@ -30,6 +29,7 @@ function App() {
       {/* <MainProdPage /> */}
       {/* <ProductsList /> */}
       <Footer />
+      {/* <Cart /> */}
     </div>
   )
 }
