@@ -25,6 +25,9 @@ export default {
       backgroundImage: {
         'hero-bg-mob': "url(./assets/bg/hero-bg--mob.jpg)",
         'hero-bg-desk': "url(./assets/bg/hero-bg.jpg)",
+      },
+      transitionProperty: {
+        'height': 'height'
       }
     },
   },

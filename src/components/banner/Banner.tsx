@@ -36,7 +36,7 @@ const Banner = ({ gist }: BannerProps) => {
     <>
       <span className="text-bold">Discover Your Perfect Pair</span>
       Try our Style Quiz to find the best pair for you.{" "}
-      <a className="whitespace-nowrap underline" href="/">
+      <a className="underline whitespace-nowrap" href="/">
         Take the Style Quiz
       </a>
     </>
@@ -50,7 +50,7 @@ const Banner = ({ gist }: BannerProps) => {
     <div className={`banner ${currStyles.bg}`}>
       <div className="container mx-auto">
         <p
-          className={`py-2 px-2 md:px-4 md:py-3 text-center text-white font-semibold ${currStyles.fs}`}
+          className={`py-2 px-2 md:px-4 sm:py-3 text-center text-white font-semibold ${currStyles.fs}`}
         >
           {bannerContent}
         </p>

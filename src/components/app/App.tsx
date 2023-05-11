@@ -11,8 +11,8 @@ import Cart from '../cart/Cart';
 
 function App() {
   return (
-    <div className="text-3xl App">
-      <header className="header">
+    <div className="text-3xl App pt-[106px] sm:pt-[90px] md:pt-[96px]">
+      <header className="fixed top-0 z-[1001] w-full header">
         <Banner gist="sale"/>
         <Navbar />
       </header>
