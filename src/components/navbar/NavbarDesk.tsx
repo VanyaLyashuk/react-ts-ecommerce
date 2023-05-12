@@ -1,16 +1,48 @@
 import { createPortal } from "react-dom";
 import Backdrop from "../UI/Backdrop";
+import Cart from "../cart/Cart";
 import { nanoid } from "nanoid";
 import { useAppSelector, useAppDispatch } from "../../hooks/hook";
 import { openNav, closeNav } from "../../store/navDeskSlice";
+import { openCart, closeCart } from "../../store/cartSlice";
 
 import Logo from "../UI/Logo";
 
+interface NavbarFiltersProps {
+  title: string,
+  filters: string[]
+}
+
+const NavbarFilters: React.FC<NavbarFiltersProps> = ({title, filters}) => {
+  return (
+    <li>
+      <button className="mb-2 text-base font-bold uppercase hover:underline">{title}</button>
+      <ul>
+        {
+          filters.map(filter => (
+            <li 
+              className="leading-none"
+              key={nanoid()}>
+              <button className="text-sm hover:underline">{filter}</button>
+            </li>
+          ))
+        }
+      </ul>
+    </li>
+  );
+};
+
 const NavbarDesk = () => {
   const dispatch = useAppDispatch();
-  const isOpened = useAppSelector((state) => state.navDesk.isOpened);
-  const showNav = () => dispatch(openNav(isOpened));
-  const hideNav = () => dispatch(closeNav(isOpened));
+  
+  const isNavOpened = useAppSelector(state => state.navDesk.isNavOpened);
+  const showNav = () => dispatch(openNav(isNavOpened));
+  const hideNav = () => dispatch(closeNav(isNavOpened));
+
+  const isCartOpened = useAppSelector(state => state.cart.isCartOpened);
+  const showCart = () => dispatch(openCart(isCartOpened));
+  const hideCart = () => dispatch(closeCart(isCartOpened));
+
 
   const shoes = ['Everyday Sneakers', 'Active Shoes', 'Slip-Ons', 'Hiking Shoes', 'Sandals', 'Water-Repellent Sneakers', 'High Tops', 'Sale', 'Shop all'];
   const bestSellers = ['Tree Runner', 'Wool Runner', 'Tree Lounger', 'Tree Dasher 2', 'Three Dasher Relay', 'Trail Runner SWT', 'Shop All'];
@@ -81,7 +113,7 @@ const NavbarDesk = () => {
                   </a>
                 </li>
                 <li className="flex">
-                  <button>
+                  <button onClick={showCart}>
                     <svg className="w-[32px] h-[32px]">
                       <use xlinkHref="#cart-icon" />
                     </svg>
@@ -94,39 +126,18 @@ const NavbarDesk = () => {
       </nav>
       <div 
         className={`container w-full px-4 mx-auto relative overflow-hidden`}
-        style={isOpened ? navOpenStyles : navCloseStyles}>
+        style={isNavOpened ? navOpenStyles : navCloseStyles}>
         <ul className="flex justify-center pt-10 pb-[60px] gap-[70px]">
           <NavbarFilters title="Shoes" filters={shoes}/>
           <NavbarFilters title="Best Sellers" filters={bestSellers}/>
           <NavbarFilters title="Apparel & More" filters={apparel}/>
         </ul>
       </div>
-      {isOpened ? createPortal(<Backdrop hideBackdrop={hideNav}/>, document.body) : null}
+      {isNavOpened ? createPortal(<Backdrop hideBackdrop={hideNav}/>, document.body) : null}
+      {/* {isCartOpened ? createPortal(<Cart />, document.body) : null} */}
+      {createPortal(<Cart />, document.body)}
+      
     </div>
-  );
-};
-
-interface NavbarFiltersProps {
-  title: string,
-  filters: string[]
-}
-
-const NavbarFilters: React.FC<NavbarFiltersProps> = ({title, filters}) => {
-  return (
-    <li>
-      <button className="mb-2 text-base font-bold uppercase hover:underline">{title}</button>
-      <ul>
-        {
-          filters.map(filter => (
-            <li 
-              className="leading-none"
-              key={nanoid()}>
-              <button className="text-sm hover:underline">{filter}</button>
-            </li>
-          ))
-        }
-      </ul>
-    </li>
   );
 };
 

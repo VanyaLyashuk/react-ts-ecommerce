@@ -1,11 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import navDeskReducer from './navDeskSlice';
 import navMobSlice from "./navMobSlice";
+import cartSlice from './cartSlice';
 
 const store = configureStore({
   reducer: {
     navDesk: navDeskReducer,
     navMob: navMobSlice,
+    cart: cartSlice,
   }
 });
 

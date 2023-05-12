@@ -1,11 +1,11 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
 type NavMobProps = {
-  isOpened: boolean
+  isNavOpened: boolean
 }
 
 const initialState: NavMobProps = {
-  isOpened: false
+  isNavOpened: false
 }
 
 const navMobSlice = createSlice({
@@ -13,7 +13,7 @@ const navMobSlice = createSlice({
   initialState,
   reducers: {
     toggleNav(state, action: PayloadAction<boolean>) {
-      state.isOpened = !state.isOpened
+      state.isNavOpened = !state.isNavOpened
     }
   }
 });

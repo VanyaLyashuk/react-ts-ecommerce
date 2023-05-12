@@ -1,11 +1,11 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 type NavDeskProps = {
-  isOpened: boolean,
+  isNavOpened: boolean,
 }
 
 const initialState: NavDeskProps = {
-  isOpened: false
+  isNavOpened: false
 }
 
 const navDeskSlice = createSlice({
@@ -13,10 +13,10 @@ const navDeskSlice = createSlice({
   initialState,
   reducers: {
     openNav(state, action: PayloadAction<boolean>) {
-      state.isOpened = true;
+      state.isNavOpened = true;
     },
     closeNav(state, action: PayloadAction<boolean>) {
-      state.isOpened = false;
+      state.isNavOpened = false;
     },
   },
 });

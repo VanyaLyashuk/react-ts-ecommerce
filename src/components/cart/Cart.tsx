@@ -1,3 +1,6 @@
+import { useAppSelector, useAppDispatch } from "../../hooks/hook";
+import { closeCart } from "../../store/cartSlice";
+
 import prodImg from "../../assets/prod1.jpg";
 import Backdrop from "../UI/Backdrop";
 import Btn from "../UI/Btn";
@@ -58,13 +61,33 @@ const CartItem = () => {
 };
 
 const Cart = () => {
+  const dispatch = useAppDispatch();
+  const isCartOpened = useAppSelector((state) => state.cart.isCartOpened);
+  const hideCart = () => dispatch(closeCart(isCartOpened));
+
+  const cartOpenedStyles = {
+    transform: "translateX(0%)",
+    opacity: "1",
+  };
+  const cartCloseStyles = {
+    transform: "translateX(100%)",
+    opacity: "0",
+  };
+
   return (
     <div>
-      <Backdrop />
-      <div className="flex flex-col justify-between bg-white w-full max-w-[480px] px-5 py-6 fixed top-0 right-0 bottom-0 z-[1001]">
-        <svg className="w-12 h-12 absolute top-[13px] left-[10px]">
-          <use xlinkHref="#cross-icon" />
-        </svg>
+      <div style={isCartOpened ? {display: 'block'} : {display: 'none'}}>
+        <Backdrop hideBackdrop={hideCart} zIndex={999} />
+      </div>
+      <div
+        className="transition-transform duration-[400ms] ease-out flex flex-col justify-between px-5 py-6 bg-white max-w-[480px] fixed top-0 right-0 bottom-0 z-[1001] translate-x-full"
+        style={isCartOpened ? cartOpenedStyles : cartCloseStyles}
+      >
+        <button onClick={hideCart} className="absolute top-[13px] left-[10px]">
+          <svg className="w-12 h-12">
+            <use xlinkHref="#cross-icon" />
+          </svg>
+        </button>
         <div>
           <div className="flex flex-col items-center w-full mb-6">
             <svg className="w-10 h-10 mb-1">

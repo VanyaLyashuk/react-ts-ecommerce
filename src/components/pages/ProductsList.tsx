@@ -80,18 +80,18 @@ const ProductCardMob = () => {
     <li className="w-full max-w-[340px] shrink-0 bg-white shadow-lg">
       <div className="group aspect-square relative overflow-hidden lg:h-[310px] xl:h-[340px] cursor-pointer">
         <img
-          className="w-full h-full object-cover object-center"
+          className="object-cover object-center w-full h-full"
           src={sliderImg}
           alt=""
         />
       </div>
-      <div className="flex flex-col py-4 px-3 lg:pt-5 lg:px-4">
-        <h3 className="text-base font-bold mb-1 lg:text-xl">Air force 1 Low</h3>
-        <div className="flex-col gap-1 items-center">
+      <div className="flex flex-col px-3 py-4 lg:pt-5 lg:px-4">
+        <h3 className="mb-1 text-base font-bold lg:text-xl">Air force 1 Low</h3>
+        <div className="flex-col items-center gap-1">
           <Colourways colors={colors} paletteSize="small" />
         </div>
-        <div className="border-t pt-3">
-          <button className="w-full font-bold text-sm flex justify-between items-center">
+        <div className="pt-3 border-t">
+          <button className="flex items-center justify-between w-full text-sm font-bold">
             <span>Quick Add</span>{" "}
             <span className="text-xl leading-none">+</span>
           </button>
@@ -106,30 +106,30 @@ const ProductsListMob = () => {
 
   return (
     <div className="lg:hidden">
-      <div className="container mx-auto px-3 pt-8 sm:pt-10">
+      <div className="container px-3 pt-8 mx-auto sm:pt-10">
         <div className="mb-3 lg:mb-4">
           <BreadCrumbs links={["Home", "Women's Shoes"]} />
         </div>
-        <h2 className="text-lg leading-tight font-bold mb-3">Active Shoes</h2>
+        <h2 className="mb-3 text-lg font-bold leading-tight">Active Shoes</h2>
       </div>
       <div className="flex overflow-x-scroll cursor-grab scroll-smooth no-scrollbar bg-[#f5f5f5] mb-5 sm:overflow-x-auto">
         <Categories size="mob"/>
       </div>
-      <div className="container mx-auto px-3 pb-10 sm:pb-12">
+      <div className="container px-3 pb-10 mx-auto sm:pb-12">
         <div className="flex items-center justify-between mb-5">
           <div className="flex border p-[2px] rounded-full bg-white">
             <button
-              className="text-sm uppercase font-medium rounded-full px-4 py-1 disabled:bg-main-color disabled:text-white"
+              className="px-4 py-1 text-sm font-medium uppercase rounded-full disabled:bg-main-color disabled:text-white"
               disabled
             >
               Women
             </button>
-            <button className="text-sm uppercase font-medium rounded-full px-3 py-1 disabled:bg-main-color disabled:text-white">
+            <button className="px-3 py-1 text-sm font-medium uppercase rounded-full disabled:bg-main-color disabled:text-white">
               Men
             </button>
           </div>
           <button className="flex justify-center items-center border rounded-full px-4 py-[6px] gap-2">
-            <span className="text-sm uppercase font-medium">Filters</span>
+            <span className="text-sm font-medium uppercase">Filters</span>
             <svg className="w-4 h-4">
               <use xlinkHref="#filter-icon" />
             </svg>
@@ -144,9 +144,9 @@ const ProductsListMob = () => {
       </div>
       <Portal>
         <div className='hidden'>
-          <Backdrop />
+          {/* <Backdrop /> */}
           <div className='fixed top-0 right-0 bottom-0 bg-white z-[1001] overflow-y-scroll w-[90%] max-w-[330px] lg:hidden'>
-            <div className='border-b px-4 py-3'>
+            <div className='px-4 py-3 border-b'>
               <svg className='w-6 h-6'>
                 <use xlinkHref="#right-arrow-icon"/>
               </svg>
@@ -164,53 +164,53 @@ const ProductsListMob = () => {
 const ProductCardDesk = () => {
   return (
     <li className="w-full flex-col px-2 pt-4 pb-3 group cursor-pointer relative after:hidden after:content-[''] after:absolute after:bg-white h-[100%] after:top-0 after:left-[-8px] after:bottom-0 after:right-[-8px] after:shadow-prod-card after:z-0 hover:after:block hover:z-20 xl:pb-3 2xl:px-3 2xl:pt-6 2xl:pb-4 2xl:after:left-[-12px] 2xl:after:right-[-12px]">
-      <div className="aspect-square relative overflow-hidden z-10">
+      <div className="relative z-10 overflow-hidden aspect-square">
         <img
-          className="w-full h-full object-cover object-center"
+          className="object-cover object-center w-full h-full"
           src={sliderImg}
           alt=""
         />
       </div>
-      <div className="flex-col pt-4 relative z-10">
-        <h3 className="text-sm font-bold mb-1 lg:text-base xl:text-xl">
+      <div className="relative z-10 flex-col pt-4">
+        <h3 className="mb-1 text-sm font-bold lg:text-base xl:text-xl">
           Air force 1 Low
         </h3>
-        <h3 className="text-sm mb-1 xl:text-base">
+        <h3 className="mb-1 text-sm xl:text-base">
           Forage Green (Blizzard Sole)
         </h3>
-        <h3 className="text-sm mb-2 xl:text-base xl:mb-3">$150</h3>
+        <h3 className="mb-2 text-sm xl:text-base xl:mb-3">$150</h3>
         <div className="flex gap-1 h-[32px] xl:h-[44px]">
-          <button className="aspect-square relative overflow-hidden cursor-pointer border border-transparent border-neutral-400">
+          <button className="relative overflow-hidden border border-transparent cursor-pointer aspect-square border-neutral-400">
             <img
-              className="w-full h-full object-cover object-center"
+              className="object-cover object-center w-full h-full"
               src={sliderImg}
               alt=""
             />
           </button>
-          <button className="aspect-square relative overflow-hidden cursor-pointer border border-transparent hover:border-neutral-400">
+          <button className="relative overflow-hidden border border-transparent cursor-pointer aspect-square hover:border-neutral-400">
             <img
-              className="w-full h-full object-cover object-center"
+              className="object-cover object-center w-full h-full"
               src={sliderImg}
               alt=""
             />
           </button>
-          <button className="aspect-square relative overflow-hidden cursor-pointer border border-transparent hover:border-neutral-400">
+          <button className="relative overflow-hidden border border-transparent cursor-pointer aspect-square hover:border-neutral-400">
             <img
-              className="w-full h-full object-cover object-center"
+              className="object-cover object-center w-full h-full"
               src={sliderImg}
               alt=""
             />
           </button>
-          <button className="aspect-square relative overflow-hidden cursor-pointer border border-transparent hover:border-neutral-400">
+          <button className="relative overflow-hidden border border-transparent cursor-pointer aspect-square hover:border-neutral-400">
             <img
-              className="w-full h-full object-cover object-center"
+              className="object-cover object-center w-full h-full"
               src={sliderImg}
               alt=""
             />
           </button>
-          <button className="aspect-square relative overflow-hidden cursor-pointer border border-transparent hover:border-neutral-400">
+          <button className="relative overflow-hidden border border-transparent cursor-pointer aspect-square hover:border-neutral-400">
             <img
-              className="w-full h-full object-cover object-center"
+              className="object-cover object-center w-full h-full"
               src={sliderImg}
               alt=""
             />
@@ -218,7 +218,7 @@ const ProductCardDesk = () => {
         </div>
       </div>
       <div className="hidden shadow-quick-add px-4 pb-5 group-hover:block absolute z-10 top-[100%] left-[-8px] right-[-8px] bg-white xl:pb-6 2xl:pb-7 2xl:px-6 2xl:left-[-12px] 2xl:right-[-12px]">
-        <h3 className="text-sm font-bold mb-1">Quick Add</h3>
+        <h3 className="mb-1 text-sm font-bold">Quick Add</h3>
         <Sizes sizes={sizes} paletteSize="small" />
       </div>
     </li>
@@ -239,17 +239,17 @@ const ProductsListDesk = () => {
         <div className="flex items-center justify-end mb-3 2xl:mb-4">
           <div className="flex border p-[2px] rounded-full bg-white">
             <button
-              className="text-sm uppercase font-medium rounded-full px-4 py-1 disabled:bg-main-color disabled:text-white"
+              className="px-4 py-1 text-sm font-medium uppercase rounded-full disabled:bg-main-color disabled:text-white"
               disabled
             >
               Women
             </button>
-            <button className="text-sm uppercase font-medium rounded-full px-3 py-1 disabled:bg-main-color disabled:text-white">
+            <button className="px-3 py-1 text-sm font-medium uppercase rounded-full disabled:bg-main-color disabled:text-white">
               Men
             </button>
           </div>
         </div>
-        <ul className="grid justify-center grid-cols-3 gap-y-5 pl-4 pr-2 2xl:grid-cols-3 2xl:pr-3">
+        <ul className="grid justify-center grid-cols-3 pl-4 pr-2 gap-y-5 2xl:grid-cols-3 2xl:pr-3">
           <ProductCardDesk />
           <ProductCardDesk />
           <ProductCardDesk />

@@ -1,4 +1,5 @@
 import { useAppDispatch, useAppSelector } from "../../hooks/hook";
+import { openCart, closeCart } from "../../store/cartSlice";
 import { toggleNav } from "../../store/navMobSlice";
 import Hamburger from "../UI/Hamburger";
 import Logo from "../UI/Logo";
@@ -87,8 +88,12 @@ const NavbarMenu = () => {
 
 const NavbarMob = () => {
   const dispatch = useAppDispatch();
-  const isOpened = useAppSelector((state) => state.navMob.isOpened);
-  const toggleNavVisivility = () => dispatch(toggleNav(isOpened));
+  
+  const isNavOpened = useAppSelector((state) => state.navMob.isNavOpened);
+  const toggleNavVisivility = () => dispatch(toggleNav(isNavOpened));
+  
+  const isCartOpened = useAppSelector((state) => state.cart.isCartOpened);
+  const showCart = () => dispatch(openCart(isCartOpened));
 
   const navOpenedStyles = {
     maxHeight: "100vh",
@@ -101,7 +106,7 @@ const NavbarMob = () => {
     <div className="xl:hidden">
       <nav className="nav nav--mob shadow-nav">
         <div className="container relative flex items-center justify-between px-3 py-2 mx-auto md:px-4">
-          <Hamburger toggleNav={toggleNavVisivility} isOpened={isOpened} />
+          <Hamburger toggleNav={toggleNavVisivility} isNavOpened={isNavOpened} />
           <div className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
             <Logo />
           </div>
@@ -111,7 +116,7 @@ const NavbarMob = () => {
                 <use xlinkHref="#search-icon" />
               </svg>
             </button>
-            <button className="-mr-[2px]">
+            <button className="-mr-[2px]" onClick={showCart}>
               <svg className="w-[30px] h-[30px]">
                 <use xlinkHref="#cart-icon" />
               </svg>
@@ -121,7 +126,7 @@ const NavbarMob = () => {
       </nav>
       <div
         className="relative flex overflow-x-hidden flex-nowrap"
-        style={isOpened ? navOpenedStyles : navCloseStyles}
+        style={isNavOpened ? navOpenedStyles : navCloseStyles}
       >
         <NavbarMenu />
       </div>
