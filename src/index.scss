@@ -10,7 +10,7 @@
     @apply pt-9 pb-12 sm:pb-16 lg:pt-12 lg:pb-[120px];
   }
   .btn {
-    @apply py-3 px-4 bg-main-color text-white font-bold uppercase text-sm border-2 border-main-color rounded-sm hover:bg-transparent hover:text-main-color focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 min-w-[145px] transition-all duration-300 md:py-3 md:px-4 xl:text-lg xl:min-w-[185px];
+    @apply py-3 px-4 bg-main-color text-white text-center font-bold uppercase text-sm border-2 border-main-color rounded-sm hover:bg-transparent hover:text-main-color focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 min-w-[145px] transition-all duration-300 md:py-3 md:px-4 xl:text-lg xl:min-w-[185px];
   }
   .btn--small {
     @apply w-full text-xs py-[10px] md:text-xs;

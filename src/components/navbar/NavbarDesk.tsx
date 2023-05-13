@@ -1,4 +1,5 @@
 import { createPortal } from "react-dom";
+import {Link} from 'react-router-dom';
 import Backdrop from "../UI/Backdrop";
 import Cart from "../cart/Cart";
 import { nanoid } from "nanoid";
@@ -87,30 +88,30 @@ const NavbarDesk = () => {
           <Logo />
           <ul className="flex items-center gap-8 xl:min-w-[404px] xl:justify-end">
             <li className="flex">
-              <a href="/" className="nav__link">
+              <Link to="/rerun" className="nav__link">
                 Rerun
-              </a>
+              </Link>
             </li>
             <li className="flex">
-              <a href="/" className="nav__link">
+              <Link to="/stores" className="nav__link">
                 Stores
-              </a>
+              </Link>
             </li>
             <li className="flex">
               <ul className="flex items-center gap-2.5">
                 <li>
-                  <a href="/">
+                  <Link to="/profile">
                     <svg className="w-[24px] h-[24px]">
                       <use xlinkHref="#user-icon" />
                     </svg>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/">
+                  <Link to="/help">
                     <svg className="w-[28px] h-[28px]">
                       <use xlinkHref="#info-icon" />
                     </svg>
-                  </a>
+                  </Link>
                 </li>
                 <li className="flex">
                   <button onClick={showCart}>

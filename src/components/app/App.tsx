@@ -1,21 +1,20 @@
 import { Routes, Route } from "react-router-dom";
-import { Mainpage, MainProdPage, ProductsList } from "../pages";
-import Navbar from "../navbar/Navbar";
-import Banner from "../banner/Banner";
+import Layout from "../layout/Layout";
+import { MainPage, MainProdPage, ProductsList, NotFoundPage, HelpPage } from "../pages";
 
 function App() {
   return (
-    <>
-      <div className="text-3xl App pt-[106px] sm:pt-[90px] md:pt-[96px]">
-        <header className="fixed top-0 z-[999] w-full header">
-          <Banner gist="sale" />
-          <Navbar />
-        </header>
-        <Routes>
-          <Route path="/" element={<Mainpage />} />
-        </Routes>
-      </div>
-    </>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<MainPage />} />
+        <Route path="/help" element={<HelpPage />} />
+        <Route path="/products/mens" element={<ProductsList />} />
+        <Route path="/products/mens/sale" element={<ProductsList />} />
+        <Route path="/products/womens" element={<ProductsList />} />
+        <Route path="/products/womens/sale" element={<ProductsList />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Route>
+    </Routes>
   );
 }
 

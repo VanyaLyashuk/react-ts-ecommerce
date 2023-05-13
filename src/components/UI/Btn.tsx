@@ -1,7 +1,8 @@
 type BtnProps = {
   children: string,
   className?: string,
-  disabled?: boolean
+  disabled?: boolean,
+  component?: JSX.Element,
 }
 
 const Btn = ({ children, className, disabled}: BtnProps) => {

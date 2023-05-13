@@ -4,10 +4,8 @@ import Favorites from "../favorites/Favorites";
 import Promo from "../promo/Promo";
 import Slider from "../slider/Slider";
 import Newsletter from "../newsletter/Newsletter";
-import Footer from "../footer/Footer";
 
-
-const Mainpage = () => {
+const MainPage = () => {
   return (
     <>
       <Hero />
@@ -20,9 +18,8 @@ const Mainpage = () => {
         <Slider />
         <Newsletter />
       </main>
-      <Footer />
     </>
   );
 };
 
-export default Mainpage;
+export default MainPage;

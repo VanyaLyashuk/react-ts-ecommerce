@@ -1,21 +1,53 @@
 import { useAppSelector, useAppDispatch } from "../../hooks/hook";
 import { closeCart } from "../../store/cartSlice";
+import { Link } from "react-router-dom";
 
 import prodImg from "../../assets/prod1.jpg";
 import Backdrop from "../UI/Backdrop";
 import Btn from "../UI/Btn";
 
-const EmptyCart = () => {
+interface EmptyCartProps {
+  hideCart: () => any;
+}
+
+const EmptyCart: React.FC<EmptyCartProps> = ({ hideCart }) => {
   return (
-    <div className="flex flex-col gap-y-2 w-full max-w-[290px] mx-auto">
+    <div className="flex flex-col gap-y-2 w-full min-w-[280px] max-w-[480px] mx-auto sm:min-w-[320px] lg:min-w-[380px]">
       <h3 className="mb-1 text-base font-medium text-center">
         Your Cart is Empty
       </h3>
-      <Btn className="btn btn--stroke">Shop Men's</Btn>
-      <Btn className="btn btn--stroke">Shop Women's</Btn>
-      <Btn className="btn btn--stroke">Shop Socks</Btn>
-      <Btn className="btn btn--stroke">Shop Men's Sale</Btn>
-      <Btn className="btn btn--stroke">Shop Women's Sale</Btn>
+      <Link 
+        to="/products/mens" 
+        className="btn btn--stroke" 
+        onClick={hideCart}>
+        Shop Men's
+      </Link>
+      <Link 
+        to="/products/womens" 
+        className="btn btn--stroke" 
+        onClick={hideCart}>
+        Shop Women's
+      </Link>
+      <Link 
+        to="/products/socks" 
+        className="btn btn--stroke" 
+        onClick={hideCart}>
+        Shop Socks
+      </Link>
+      <Link
+        to="/products/mens/sale"
+        className="btn btn--stroke"
+        onClick={hideCart}
+      >
+        Shop Men's Sale
+      </Link>
+      <Link
+        to="/products/womens/sale"
+        className="btn btn--stroke"
+        onClick={hideCart}
+      >
+        Shop Women's Sale
+      </Link>
     </div>
   );
 };
@@ -76,11 +108,11 @@ const Cart = () => {
 
   return (
     <div>
-      <div style={isCartOpened ? {display: 'block'} : {display: 'none'}}>
+      <div style={isCartOpened ? { display: "block" } : { display: "none" }}>
         <Backdrop hideBackdrop={hideCart} zIndex={999} />
       </div>
       <div
-        className="transition-transform duration-[400ms] ease-out flex flex-col justify-between px-5 py-6 bg-white max-w-[480px] fixed top-0 right-0 bottom-0 z-[1001] translate-x-full"
+        className="transition-transform duration-[400ms] ease-out flex flex-col justify-between px-5 py-6 bg-white max-w-[480px] fixed top-0 right-0 bottom-0 z-[1001] translate-x-full overflow-y-scroll"
         style={isCartOpened ? cartOpenedStyles : cartCloseStyles}
       >
         <button onClick={hideCart} className="absolute top-[13px] left-[10px]">
@@ -99,12 +131,12 @@ const Cart = () => {
             </p>
             <div className="w-full h-2 bg-neutral-100 relative before:content-[''] before:absolute before:h-2 before:w-[40%] before:bg-indigo-400"></div>
           </div>
-          {/* <EmptyCart /> */}
-          <ul>
+          <EmptyCart hideCart={hideCart} />
+          {/* <ul>
             <CartItem />
-          </ul>
+          </ul> */}
         </div>
-        <div>
+        {/* <div>
           <div className="flex items-center gap-2.5 py-4 border-t-2 border-b">
             <svg className="w-6 h-6">
               <use xlinkHref="#gift-icon" />
@@ -127,7 +159,7 @@ const Cart = () => {
             </li>
           </ul>
           <Btn className="w-full btn btn--dark">Proceed To Checkout</Btn>
-        </div>
+        </div> */}
       </div>
     </div>
   );

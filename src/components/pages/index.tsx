@@ -1,5 +1,7 @@
-import Mainpage from "./Mainpage";
+import MainPage from "./MainPage";
+import HelpPage from './HelpPage';
 import ProductsList from "./ProductsList";
 import MainProdPage from "./MainProdPage";
+import NotFoundPage from "./NotFoundPage";
 
-export {Mainpage, MainProdPage, ProductsList}
+export {MainPage, HelpPage, MainProdPage, ProductsList, NotFoundPage}
