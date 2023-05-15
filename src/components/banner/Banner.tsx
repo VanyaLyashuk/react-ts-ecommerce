@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 type BannerProps = {
   gist: string;
 };
@@ -17,17 +19,17 @@ const Banner = ({ gist }: BannerProps) => {
     <>
       Get Sweaty, Feel Good With Up to 40% Off Select Styles.{" "}
       <span className="whitespace-nowrap">
-        <a className="underline" href="/">
+        <Link to="/products/mens" className="underline">
           Shop Men
-        </a>{" "}
+        </Link>{" "}
         |{" "}
-        <a className="underline" href="/">
+        <Link to="/products/womens" className="underline">
           Shop Women
-        </a>{" "}
+        </Link>{" "}
         *
-        <a className="underline" href="/">
+        <Link to="/details" className="underline">
           Details
-        </a>
+        </Link>
       </span>
     </>
   );
@@ -36,9 +38,9 @@ const Banner = ({ gist }: BannerProps) => {
     <>
       <span className="text-bold">Discover Your Perfect Pair</span>
       Try our Style Quiz to find the best pair for you.{" "}
-      <a className="underline whitespace-nowrap" href="/">
+      <Link to="/quiz" className="underline whitespace-nowrap">
         Take the Style Quiz
-      </a>
+      </Link>
     </>
   );
 

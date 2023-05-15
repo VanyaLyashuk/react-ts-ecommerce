@@ -1,4 +1,4 @@
-import { useAppSelector, useAppDispatch } from "../../hooks/hook";
+import { useAppSelector, useAppDispatch } from "../../hooks/useTypedUseSelectorHook";
 import { closeCart } from "../../store/cartSlice";
 import { Link } from "react-router-dom";
 

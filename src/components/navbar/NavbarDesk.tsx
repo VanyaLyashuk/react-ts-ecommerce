@@ -1,9 +1,9 @@
 import { createPortal } from "react-dom";
-import {Link} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 import Backdrop from "../UI/Backdrop";
 import Cart from "../cart/Cart";
 import { nanoid } from "nanoid";
-import { useAppSelector, useAppDispatch } from "../../hooks/hook";
+import { useAppSelector, useAppDispatch } from "../../hooks/useTypedUseSelectorHook";
 import { openNav, closeNav } from "../../store/navDeskSlice";
 import { openCart, closeCart } from "../../store/cartSlice";
 
@@ -88,14 +88,14 @@ const NavbarDesk = () => {
           <Logo />
           <ul className="flex items-center gap-8 xl:min-w-[404px] xl:justify-end">
             <li className="flex">
-              <Link to="/rerun" className="nav__link">
+              <NavLink to="/rerun" className="nav__link">
                 Rerun
-              </Link>
+              </NavLink>
             </li>
             <li className="flex">
-              <Link to="/stores" className="nav__link">
+              <NavLink to="/stores" className="nav__link">
                 Stores
-              </Link>
+              </NavLink>
             </li>
             <li className="flex">
               <ul className="flex items-center gap-2.5">

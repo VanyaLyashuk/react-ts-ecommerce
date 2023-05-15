@@ -1,4 +1,4 @@
-import { useAppDispatch, useAppSelector } from "../../hooks/hook";
+import { useAppDispatch, useAppSelector } from "../../hooks/useTypedUseSelectorHook";
 import { openCart, closeCart } from "../../store/cartSlice";
 import { toggleNav } from "../../store/navMobSlice";
 import Hamburger from "../UI/Hamburger";
